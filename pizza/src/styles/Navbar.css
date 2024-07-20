@@ -1,0 +1,115 @@
+.navbar {
+    width: 100%;
+    height: 100%;
+    background-color: #121619;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .left {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.navbar .left img {
+    width: 150px;
+}
+
+.navbar .right {
+    flex: 50%;
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.navbar .right button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .right svg {
+    font-size: 50px;
+}
+
+.navbar #open {
+    padding-left: 0px;
+}
+
+.navbar #open img {
+    display: none;
+}
+
+.navbar #close img {
+    display: inherit;
+}
+
+.navbar #open .hide {
+    display: inherit;
+    margin-left: 30px;
+}
+
+.navbar #close .hide {
+    display: none;
+}
+
+.navbar #open a {
+    width: 70px;
+    margin: 5px;
+}
+.custom-navbar {
+	background-color: #b33030;
+}
+
+.nav-text {
+	color: white;
+}
+#dropdownMenuButton1:active {
+	background-color: red !important;
+}
+#dropdownMenuButton1:hover {
+	background-color: red !important;
+}
+.dropdown-item:active {
+	background-color: red;
+}
+@media only screen and (max-width: 900px) {
+    .navbar .right a{
+        width: 70px;
+    }
+    .navbar .left {
+        padding-left: 50px;
+    }    
+}
+@media only screen and (max-width: 600px) {
+    .navbar .right a{
+        display: none;
+    }
+    .navbar .right {
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+    .navbar .right button {
+        display: inherit;
+    }
+}
+@media only screen and (min-width:600px) {
+    .navbar .right button {
+        display: none;
+    }
+    .hide{
+        display: none;
+    }
+}
