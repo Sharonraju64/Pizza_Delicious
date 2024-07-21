@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 			token: crypto.randomBytes(32).toString('hex'),
 		}).save();
 
-		const url = `http://localhost:5000/api/user/${user.id}/verify/${token.token}`;
+		const url = `https://pizza-backend-50h0.onrender.comapi/user/${user.id}/verify/${token.token}`;
 		await sendEmail(
 			user.email,
 			'Verify Email',

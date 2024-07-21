@@ -16,7 +16,7 @@ export const placeOrder = (subtotal) => async (dispatch, getState) => {
 			handler: async (response) => {
 				try {
 					const { data } = await axios.post(
-						'http://localhost:5000/api/order/verifypayment',
+						'https://pizza-backend-50h0.onrender.comapi/order/verifypayment',
 						//post user to backend
 						{
 							paymentId: response.razorpay_payment_id,
@@ -54,7 +54,7 @@ export const placeOrder = (subtotal) => async (dispatch, getState) => {
 
 	try {
 		const { data } = await axios.post(
-			'http://localhost:5000/api/order/orders',
+			'https://pizza-backend-50h0.onrender.comapi/order/orders',
 			{ subtotal },
 		);
 
@@ -85,7 +85,7 @@ export const getUserOrders = () => async (dispatch, getState) => {
 
 	try {
 		const response = await axios.post(
-			'http://localhost:5000/api/order/getuserorders',
+			'https://pizza-backend-50h0.onrender.comapi/order/getuserorders',
 			{ userId: user._id },
 		);
 		console.log(response);
@@ -100,7 +100,7 @@ export const getAllOrders = () => async (dispatch) => {
 	dispatch({ type: 'GET_ALL_ORDERS_REQUEST' });
 	try {
 		const response = await axios.get(
-			'http://localhost:5000/api/order/getallorders',
+			'https://pizza-backend-50h0.onrender.comapi/order/getallorders',
 		);
 		console.log(response);
 		dispatch({ type: 'GET_ALL_ORDERS_SUCCESS', payload: response.data });
@@ -114,13 +114,13 @@ export const deliverOrder = (orderid) => async (dispatch) => {
 	dispatch({ type: 'CHECK_ORDER_STATUS_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:5000/api/order/deliverorder',
+			'https://pizza-backend-50h0.onrender.comapi/order/deliverorder',
 			{ orderid: orderid },
 		);
 		console.log(response);
 		alert('Order Delivered');
 		const orders = await axios.get(
-			'http://localhost:5000/api/order/getallorders',
+			'https://pizza-backend-50h0.onrender.comapi/order/getallorders',
 		);
 		window.location.reload();
 		console.log(orders);

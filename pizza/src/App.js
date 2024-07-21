@@ -34,7 +34,7 @@ function App() {
 		let token = localStorage.getItem('token');
 		if (token) {
 			const url =
-				'http://localhost:5000/api/auth/jwt/verify';
+				'https://pizza-backend-50h0.onrender.comapi/auth/jwt/verify';
 			axios
 				.get(url, {
 					params: {

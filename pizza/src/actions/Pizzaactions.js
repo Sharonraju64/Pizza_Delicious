@@ -5,7 +5,7 @@ export const getAllPizzas = () => async (dispatch) => {
 
 	try {
 		const response = await axios.get(
-			'http://localhost:5000/api/pizza/getallpizzas',
+			'https://pizza-backend-50h0.onrender.comapi/pizza/getallpizzas',
 		);
 		// console.log(response);
 		dispatch({ type: 'GET_PIZZAS_SUCCESS', payload: response.data });
@@ -18,7 +18,7 @@ export const addPizza = (pizza) => async (dispatch) => {
 	dispatch({ type: 'ADD_PIZZA_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:5000/api/pizza/addpizza',
+			'https://pizza-backend-50h0.onrender.comapi/pizza/addpizza',
 			{ pizza: pizza },
 		);
 		console.log(response);
@@ -33,7 +33,7 @@ export const getPizzaById = (pizzaid) => async (dispatch) => {
 	dispatch({ type: 'GET_PIZZA_BY_ID_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:5000/api/pizza/getpizzabyid',
+			'https://pizza-backend-50h0.onrender.comapi/pizza/getpizzabyid',
 			{ pizzaid: pizzaid },
 		);
 		console.log(response);
@@ -48,7 +48,7 @@ export const updatePizza = (updatedPizza) => async (dispatch) => {
 	dispatch({ type: 'UPDATE_PIZZA_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:5000/api/pizza/updatepizza',
+			'https://pizza-backend-50h0.onrender.comapi/pizza/updatepizza',
 			{ updatedPizza: updatedPizza },
 		);
 		console.log(response);
@@ -64,7 +64,7 @@ export const deletePizza = (pizzaid) => async (dispatch) => {
 	dispatch({ type: 'DELETE_PIZZA_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:5000/api/pizza/deletepizza',
+			'https://pizza-backend-50h0.onrender.comapi/pizza/deletepizza',
 			{ pizzaid: pizzaid },
 		);
 		console.log(response);

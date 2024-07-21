@@ -11,7 +11,7 @@ const EmailVerify = () => {
 	useEffect(() => {
 		const verifyEmailUrl = async () => {
 			try{
-				const url = `http://localhost:5000/api/user/${id}/verify/${token}`;
+				const url = `https://pizza-backend-50h0.onrender.comapi/user/${id}/verify/${token}`;
 				const { data } = await axios.get(url);
 				console.log(data);
 				if (data?.success) {

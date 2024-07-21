@@ -18,7 +18,7 @@ function Login() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = 'http://localhost:5000/api/auth';
+			const url = 'https://pizza-backend-50h0.onrender.comapi/auth';
 			const res = await axios.post(url, data);
 			localStorage.setItem('token', res?.data?.data);
 			if (res?.data?.user?.role === 'admin') {
