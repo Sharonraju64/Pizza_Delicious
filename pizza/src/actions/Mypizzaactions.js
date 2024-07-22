@@ -4,7 +4,7 @@ export const getAllBases = () => async (dispatch) => {
 	dispatch({ type: 'GET_BASES_REQUEST' });
 
 	const response = await axios.get(
-		'https://pizza-backend-50h0.onrender.comapi/mypizza/getallbases',
+		'https://pizza-backend-50h0.onrender.com/api/mypizza/getallbases',
 	);
 	// console.log(response);
 	dispatch({ type: 'GET_BASES_SUCCESS', payload: response.data });
@@ -14,7 +14,7 @@ export const getAllSauces = () => async (dispatch) => {
 	dispatch({ type: 'GET_SAUCES_REQUEST' });
 
 	const response = await axios.get(
-		'https://pizza-backend-50h0.onrender.comapi/mypizza/getallsauces',
+		'https://pizza-backend-50h0.onrender.com/api/mypizza/getallsauces',
 	);
 	// console.log(response);
 	dispatch({ type: 'GET_SAUCES_SUCCESS', payload: response.data });
@@ -24,7 +24,7 @@ export const getAllToppings = () => async (dispatch) => {
 	dispatch({ type: 'GET_TOPPINGS_REQUEST' });
 
 	const response = await axios.get(
-		'https://pizza-backend-50h0.onrender.comapi/mypizza/getalltoppings',
+		'https://pizza-backend-50h0.onrender.com/api/mypizza/getalltoppings',
 	);
 	// console.log(response);
 	dispatch({ type: 'GET_TOPPINGS_SUCCESS', payload: response.data });
@@ -34,7 +34,7 @@ export const getAllCheese = () => async (dispatch) => {
 	dispatch({ type: 'GET_CHEESE_REQUEST' });
 
 	const response = await axios.get(
-		'https://pizza-backend-50h0.onrender.comapi/mypizza/getallcheese',
+		'https://pizza-backend-50h0.onrender.com/api/mypizza/getallcheese',
 	);
 	// console.log(response);
 	dispatch({ type: 'GET_CHEESE_SUCCESS', payload: response.data });
@@ -45,7 +45,7 @@ export const addBase = (base) => async (dispatch) => {
 	dispatch({ type: 'ADD_BASE_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/addbase',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/addbase',
 			{ body: base },
 		);
 		console.log(response);
@@ -58,7 +58,7 @@ export const getBaseById = (baseid) => async (dispatch) => {
 	dispatch({ type: 'GET_BASE_BY_ID_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/getbasebyid',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/getbasebyid',
 			{ baseid: baseid },
 		);
 		console.log(response);
@@ -73,7 +73,7 @@ export const updateBase = (updatedBase) => async (dispatch) => {
 	dispatch({ type: 'UPDATE_BASE_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/updatebase',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/updatebase',
 			{ updatedBase: updatedBase },
 		);
 		console.log(response);
@@ -89,7 +89,7 @@ export const deleteBase = (baseid) => async (dispatch) => {
 	dispatch({ type: 'DELETE_BASE_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/deletebase',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/deletebase',
 			{ baseid: baseid },
 		);
 		console.log(response);
@@ -105,7 +105,7 @@ export const addTopping = (topping) => async (dispatch) => {
 	dispatch({ type: 'ADD_TOPPING_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/addtopping',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/addtopping',
 			{ topping: topping },
 		);
 		console.log(response);
@@ -120,7 +120,7 @@ export const getToppingById = (toppingid) => async (dispatch) => {
 	dispatch({ type: 'GET_TOPPING_BY_ID_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/gettoppingbyid',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/gettoppingbyid',
 			{ toppingid: toppingid },
 		);
 		console.log(response);
@@ -135,7 +135,7 @@ export const updateTopping = (updatedTopping) => async (dispatch) => {
 	dispatch({ type: 'UPDATE_TOPPING_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/updatetopping',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/updatetopping',
 			{ updatedTopping: updatedTopping },
 		);
 		console.log(response);
@@ -150,7 +150,7 @@ export const deleteTopping = (toppingid) => async (dispatch) => {
 	dispatch({ type: 'DELETE_TOPPING_REQUEST' });
 	try {
 		const response = await axios.post(
-			'https://pizza-backend-50h0.onrender.comapi/mypizza/deletetopping',
+			'https://pizza-backend-50h0.onrender.com/api/mypizza/deletetopping',
 			{ toppingid: toppingid },
 		);
 		console.log(response);

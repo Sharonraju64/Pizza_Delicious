@@ -5,7 +5,7 @@ export const getAllUsers = () => async (dispatch) => {
 
 	try {
 		const response = await axios.get(
-			'https://pizza-backend-50h0.onrender.comapi/user/getallusers',
+			'https://pizza-backend-50h0.onrender.com/api/user/getallusers',
 		);
 		console.log(response);
 		dispatch({ type: 'GET_ALL_USERS_SUCCESS', payload: response.data });

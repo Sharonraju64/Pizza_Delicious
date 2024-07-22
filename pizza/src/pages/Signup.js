@@ -26,7 +26,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = 'https://pizza-backend-50h0.onrender.comapi/user';
+			const url = 'https://pizza-backend-50h0.onrender.com/api/user';
 			const { data: res } = await axios.post(url, data);
 			setMsg(res.message);
 			console.log("success");
